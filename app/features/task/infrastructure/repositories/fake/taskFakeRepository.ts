@@ -1,4 +1,5 @@
 import type { Task } from '../../../domain/task'
+import type { TaskRepository, TaskCreateInput, TaskUpdateInput } from '../../../domain/taskRepository'
 
 const fakeTasks: Task[] = [
   {
@@ -35,7 +36,7 @@ export const taskFakeRepository = {
     return Promise.resolve(fakeTasks.filter(t => t.userId === userId))
   },
 
-  async create(task: Omit<Task, 'id' | 'createdAt'>): Promise<Task> {
+  async create(task: TaskCreateInput): Promise<Task> {
     const newTask: Task = {
       ...task,
       id: String(Date.now()),
@@ -45,7 +46,7 @@ export const taskFakeRepository = {
     return Promise.resolve({ ...newTask })
   },
 
-  async update(id: string, updates: Partial<Task>): Promise<Task> {
+  async update(id: string, updates: TaskUpdateInput): Promise<Task> {
     const idx = fakeTasks.findIndex(t => t.id === id)
     if (idx === -1) throw new Error('Task not found')
     fakeTasks[idx] = { ...fakeTasks[idx], ...updates }
@@ -57,4 +58,4 @@ export const taskFakeRepository = {
     if (idx !== -1) fakeTasks.splice(idx, 1)
     return Promise.resolve()
   },
-}
+} satisfies TaskRepository

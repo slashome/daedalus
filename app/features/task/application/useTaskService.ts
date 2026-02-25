@@ -1,8 +1,9 @@
 import { taskFakeRepository } from '../infrastructure/repositories/fake/taskFakeRepository'
 import type { Task } from '../domain/task'
+import type { TaskRepository, TaskUpdateInput } from '../domain/taskRepository'
 
-export function useTaskService() {
-  const repo = taskFakeRepository
+export function useTaskService(repository: TaskRepository = taskFakeRepository) {
+  const repo = repository
 
   async function getTasks(userId?: string): Promise<Task[]> {
     if (userId) return repo.getByUserId(userId)
@@ -13,7 +14,7 @@ export function useTaskService() {
     return repo.create({ ...data, completed: false })
   }
 
-  async function updateTask(id: string, updates: Partial<Task>): Promise<Task> {
+  async function updateTask(id: string, updates: TaskUpdateInput): Promise<Task> {
     return repo.update(id, updates)
   }
 
