@@ -1,0 +1,15 @@
+{
+  "tasks": {
+    "title": "Mis Tareas",
+    "empty": "Aún no hay tareas. ¡Añade una!",
+    "add": "Añadir tarea",
+    "complete": "Marcar como completada",
+    "delete": "Eliminar"
+  },
+  "task": {
+    "placeholder": "¿Qué hay que hacer?"
+  },
+  "users": {
+    "select": "Seleccionar usuario"
+  }
+}

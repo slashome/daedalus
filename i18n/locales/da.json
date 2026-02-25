@@ -1,0 +1,15 @@
+{
+  "tasks": {
+    "title": "Mine Opgaver",
+    "empty": "Ingen opgaver endnu. Tilføj en!",
+    "add": "Tilføj opgave",
+    "complete": "Marker som fuldført",
+    "delete": "Slet"
+  },
+  "task": {
+    "placeholder": "Hvad skal gøres?"
+  },
+  "users": {
+    "select": "Vælg bruger"
+  }
+}

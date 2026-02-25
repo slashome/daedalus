@@ -1,0 +1,15 @@
+{
+  "tasks": {
+    "title": "Mes Tâches",
+    "empty": "Aucune tâche pour l'instant. Ajoutez-en une!",
+    "add": "Ajouter une tâche",
+    "complete": "Marquer comme terminé",
+    "delete": "Supprimer"
+  },
+  "task": {
+    "placeholder": "Que faut-il faire?"
+  },
+  "users": {
+    "select": "Choisir un utilisateur"
+  }
+}

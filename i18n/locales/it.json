@@ -1,0 +1,15 @@
+{
+  "tasks": {
+    "title": "I Miei Compiti",
+    "empty": "Nessun compito ancora. Aggiungine uno!",
+    "add": "Aggiungi compito",
+    "complete": "Segna come completato",
+    "delete": "Elimina"
+  },
+  "task": {
+    "placeholder": "Cosa c'è da fare?"
+  },
+  "users": {
+    "select": "Seleziona utente"
+  }
+}

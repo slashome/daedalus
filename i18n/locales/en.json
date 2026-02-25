@@ -1,0 +1,15 @@
+{
+  "tasks": {
+    "title": "My Tasks",
+    "empty": "No tasks yet. Add one above!",
+    "add": "Add Task",
+    "complete": "Mark complete",
+    "delete": "Delete"
+  },
+  "task": {
+    "placeholder": "What needs to be done?"
+  },
+  "users": {
+    "select": "Select User"
+  }
+}
